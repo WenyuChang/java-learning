@@ -1,0 +1,14 @@
+TRACE - This is a trace message.
+DEBUG - This is a debug message.
+INFO - This is an info message.
+WARN - This is a warn message.
+ERROR - This is an error message.
+FATAL - This is an fatal message.
+DEBUG - This is a message written by log method.
+TRACE - This is a trace message.
+DEBUG - This is a debug message.
+INFO - This is an info message.
+WARN - This is a warn message.
+ERROR - This is an error message.
+FATAL - This is an fatal message.
+DEBUG - This is a message written by log method.

@@ -1,0 +1,2 @@
+From Properties: 2013-10-18 14:41:12.627 [ERROR] [wenyu.demo.Log4j.DemoParent.log(DemoParent.java:29)] - This is an error message. (9)
+From Properties: 2013-10-18 14:41:12.629 [FATAL] [wenyu.demo.Log4j.DemoParent.log(DemoParent.java:30)] - This is an fatal message. (11)
