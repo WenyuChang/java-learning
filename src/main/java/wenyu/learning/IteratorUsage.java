@@ -1,9 +1,6 @@
 package wenyu.learning;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.ListIterator;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
 
 public class IteratorUsage {
@@ -22,6 +19,7 @@ public class IteratorUsage {
 		while (litr.hasNext()) {
 			Object element = litr.next();
 			litr.set(element + "+");
+			al.remove(element);
 		}
 
 		// Now, display the list backwards
@@ -41,8 +39,38 @@ public class IteratorUsage {
 		}
 	}
 
-	public static void main(String[] args) {
+	private static class MyIteritor implements Iterator<Integer> {
+		private Integer[] arr;
+		private int currIdx;
+		public MyIteritor(int max) {
+			arr = new Integer[max];
+			for (int i=0; i<max; i++) {
+				arr[i] = new Random().nextInt();
+			}
+			currIdx = 0;
+		}
 
+		public boolean hasNext() {
+			return currIdx < arr.length;
+		}
+
+		public Integer next() {
+			return arr[currIdx++];
+		}
+	}
+
+	public static void main(String[] args) {
+		ArrayList<Integer> aa = new ArrayList<Integer>();
+		aa.add(1);
+		aa.add(2);
+		aa.add(3);
+		arrayListDemo(aa);
+
+
+		MyIteritor myit = new MyIteritor(100);
+		while (myit.hasNext()) {
+			System.out.print(myit.next() + ", ");
+		}
 	}
 
 }

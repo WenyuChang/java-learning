@@ -9,6 +9,9 @@ package wenyu.learning.CollectionLearning;
 	SortedSet
  */
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class CollectionKnowledge {
 	/*
 	 * Notes about collection classes:
@@ -45,7 +48,6 @@ public class CollectionKnowledge {
 		    addAll(Collection<? super T>, T...) - Adds all of the elements in the specified array to the specified collection.
 	 */
 	public static void main(String[] args) {
-
 	}
 
 }

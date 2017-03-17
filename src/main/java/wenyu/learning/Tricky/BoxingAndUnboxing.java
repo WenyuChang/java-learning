@@ -35,9 +35,12 @@ public class BoxingAndUnboxing {
 		
 		System.out.println("This's because integer only cache value which is within -127 ~ 127.\n");
 		
-
 		System.out.println("If i1(100).equal i2(100): " + (i1.equals(i2))); // True
 		System.out.println("If i3(100).equal i4(100): " + (i3.equals(i4))); // True
+		
+		Boolean b1 = true;
+		Boolean b2 = true;
+		System.out.println("If b1(trye) == b2(true): " + (b1==b2)); // True
 	}
 	
 	public static void printSum(Integer value) {
@@ -62,17 +65,18 @@ public class BoxingAndUnboxing {
 		int i = 1;
 		Integer j = new Integer(1);
 		
-		System.out.println("int i(1) == Integer j(1): " + (i == j));
+		System.out.println("int i(1) == Integer j(1): " + (i == j)); // true
 	}
 		
 	
 	public static void main(String[] args) {
+//		cacheDemo();
+		
 //		integerDemo();
 		
 		
 		/*
 		 * Method resolution Rules
-
 		    1. The compiler attempts to locate the correct method without any boxing, 
 		       unboxing, or vararg invocations. This will find any method that would 
 		       have been invoked under Java 1.4 rules

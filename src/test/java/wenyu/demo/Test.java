@@ -1,25 +1,24 @@
 package wenyu.demo;
 
-public class Test {
+import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-	public static int func(int aa) {
-		System.out.println("This is in func");
-		return aa;
-	}
-	
-	public String func(String bb) {
-		System.out.println("This is also in func");
-		return bb;
-	}
+public class Test {
 	
 	public static void main(String[] args) {
-		System.out.println("This is Test...");
-		
-		System.out.println(func(3));
-		
-		System.out.println(new Test().func("3"));
-		
-		System.out.println(new Test().func(3));
+		String line = "cassandra.staging.sntc3x.cass-3xtest-sntc-n111.org.apache.cassandra.metrics.Table.SnapshotsSize.system_auth.roles";
+		String pattern = "cassandra.*.*.*.org.apache.cassandra.metrics.Table.*";
+
+
+		line = "cassandra.staging.sntc3x.cass-3xtest-sntc-n111.org.apache.cassandra.metrics.keyspace.SnapshotsSize.system_auth.roles";
+		pattern = "cassandra\\..*org.apache.cassandra.metrics.keyspace.*";
+
+
+		if (line.matches(pattern)) {
+			System.out.println("Found value");
+		}else {
+			System.out.println("NO MATCH");
+		}
 	}
 }
- 

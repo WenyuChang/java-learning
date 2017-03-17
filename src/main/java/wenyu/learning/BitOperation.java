@@ -51,9 +51,16 @@ public class BitOperation {
 		i = Integer.MIN_VALUE-1;
 		print(i); // 01111111111111111111111111111111 (32)
 		
+		i = Integer.MIN_VALUE * -1;
+		System.out.println(i); // 10000000000000000000000000000000(32) 
+		// The result is still Integer.MIN_VALUE
+
+		i = Integer.MAX_VALUE * -1;
+		System.out.println(i); // 10000000000000000000000000000001(32)
+		// The result is Integer.MIN_VALUE+1
+		
 		float f = 2.9f;
 		print(f); // 0x1.733334p1 (12)
-		
 	}
 	
 	public static void bitOp() {
@@ -126,8 +133,12 @@ public class BitOperation {
 	}
 	
 	public static void main(String[] args) {
-		showBit();
-		//bitOp();
+		// showBit();
+		// bitOp();
+
+		int i = Integer.MAX_VALUE;
+		System.out.println(i);
+		System.out.println(Math.pow(2, 31) - 1);
 	}
 
 }

@@ -42,7 +42,6 @@ public class IteratorUsage {
 	}
 
 	public static void main(String[] args) {
-
 	}
 
 }

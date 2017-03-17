@@ -1,5 +1,11 @@
 package wenyu.learning;
 
+/*
+ * This includes final classes, final variables, and final methods:
+ * A final class cannot be extended by any other class
+ * A final variable cannot be reassigned to another value
+ * A final method cannot be overridden
+ */
 public class JavaFinalDemo {
 	public final int pre = 0;
 	

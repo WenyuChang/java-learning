@@ -1,5 +1,8 @@
 package wenyu.learning;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
+
 public class StackTraceDemo {
 
 	public static void demoEntry() {
@@ -14,6 +17,14 @@ public class StackTraceDemo {
 			System.out.println(elem.toString());
 			//System.out.println(StackTraceElement.class.getName());
 		}
+	}
+	
+	public static String stackTraceStr() {
+		Throwable throwable = new Throwable();
+		StringWriter sw = new StringWriter();
+		PrintWriter pw = new PrintWriter(sw);
+		throwable.printStackTrace(pw);
+		return sw.toString();
 	}
 	
 	/**

@@ -44,9 +44,9 @@ public class UsageDemo {
 
 		System.out.println("===============================================================");
 		
-		Constructor<MyClass> protectedConstructor = myClass.getDeclaredConstructor(String.class, int.class, String[].class);
-		protectedConstructor.setAccessible(true);
-		MyClass ins2 = protectedConstructor.newInstance("para1", 0, new String[] {"aa", "bb", "cc"});
+		Constructor<MyClass> privateConstructor = myClass.getDeclaredConstructor(String.class, int.class, String[].class);
+		privateConstructor.setAccessible(true);
+		MyClass ins2 = privateConstructor.newInstance("para1", 0, new String[] {"aa", "bb", "cc"});
 		System.out.println(ins2);
 	}
 	
@@ -164,7 +164,7 @@ public class UsageDemo {
 	public static void main(String[] args) throws Exception {
 //		classLoader();
 		
-//		classInit();
+		classInit();
 		
 //		showConstructor();
 		
@@ -172,6 +172,6 @@ public class UsageDemo {
 		
 //		showMethod("clsMethod", String.class, String.class);
 		
-		showField();
+//		showField();
 	}
 }

@@ -177,7 +177,7 @@ public class CompareDemo {
 	}
 	
 	public static void main(String[] args) {
-		demoEntry();
+		 demoEntry();
 	}
 
 }

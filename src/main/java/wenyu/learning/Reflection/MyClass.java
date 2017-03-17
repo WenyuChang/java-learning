@@ -41,7 +41,7 @@ public class MyClass {
 		System.out.println("Invoke public default constructor...");
 	}
 	private MyClass(String param1, int param2, String[] strs) {
-		System.out.println("Invoke public constructor... and parameter is " + param1 + "/" + param2);
+		System.out.println("Invoke private constructor... and parameter is " + param1 + "/" + param2);
 	}
 	
 	// static method
@@ -62,6 +62,14 @@ public class MyClass {
 	// instance methods
 	@MyAnnotation 
 	public String insMethod(@MyAnnotation String param, String param1) throws Exception {
+		String returnVal = "Invoke public instance method... and parameter is " + param;
+		System.out.println("Invoke public instance method... and parameter is " + param);
+		return returnVal;
+	}
+	
+	// instance methods
+	@MyAnnotation 
+	public String insPrivateMethod(@MyAnnotation String param, String param1) throws Exception {
 		String returnVal = "Invoke public instance method... and parameter is " + param;
 		System.out.println("Invoke public instance method... and parameter is " + param);
 		return returnVal;

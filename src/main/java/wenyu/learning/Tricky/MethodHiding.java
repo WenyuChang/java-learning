@@ -42,6 +42,7 @@ public class MethodHiding {
 		
 		ab.foo(); //B - foo
 		ab.goo(); //A - goo
+		((B)ab).goo(); //B - goo
 		
 		ac.foo(); //C - foo
 		ac.goo(); //A - goo

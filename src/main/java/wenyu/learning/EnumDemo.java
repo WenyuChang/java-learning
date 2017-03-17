@@ -4,13 +4,13 @@ enum MyEnum {
 	enum1("enum1", 1) {
 		@Override
 		void abstractPrint() {
-			System.out.println("(" + this.name() + ") This is in the abstractPrint method...");
+			System.out.println("(" + name() + ") This is in the abstractPrint method...");
 		}
 	},
 	enum2("enum2", 2) {
 		@Override
 		void abstractPrint() {
-			System.out.println("(" + this.name() + ") This is in the abstractPrint method...");
+			System.out.println("(" + name() + ") This is in the abstractPrint method...");
 		}
 	};
 	

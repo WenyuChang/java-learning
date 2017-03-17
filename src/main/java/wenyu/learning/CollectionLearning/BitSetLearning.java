@@ -37,8 +37,7 @@ public class BitSetLearning {
 	}
 
 	public static void main(String[] args) {
-		bitSetDemo();
-
+		 bitSetDemo();
 	}
 
 }
